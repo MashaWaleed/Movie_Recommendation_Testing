@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <!-- Title -->
+  <text x="400" y="30" font-family="Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#333">
+    Movie Recommendation System - High-Level Architecture
+  </text>
+  
+  <!-- Main Application Layer -->
+  <rect x="150" y="60" width="500" height="70" fill="#4A90E2" stroke="#2E5C8A" stroke-width="2" rx="5"/>
+  <text x="400" y="90" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="white">
+    Main Application
+  </text>
+  <text x="400" y="110" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="white">
+    (Orchestrator Layer)
+  </text>
+  
+  <!-- Arrows from Main to Input/Output -->
+  <line x1="300" y1="130" x2="250" y2="180" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="500" y1="130" x2="550" y2="180" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- Input Layer -->
+  <rect x="100" y="180" width="200" height="70" fill="#50C878" stroke="#3A9B5C" stroke-width="2" rx="5"/>
+  <text x="200" y="210" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="white">
+    Input Layer
+  </text>
+  <text x="200" y="230" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="white">
+    (Parsers)
+  </text>
+  
+  <!-- Output Layer -->
+  <rect x="500" y="180" width="200" height="70" fill="#F5A623" stroke="#C78419" stroke-width="2" rx="5"/>
+  <text x="600" y="210" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="white">
+    Output Layer
+  </text>
+  <text x="600" y="230" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="white">
+    (Formatter)
+  </text>
+  
+  <!-- Arrow from Input to Validation -->
+  <line x1="200" y1="250" x2="200" y2="290" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="220" y="275" font-family="Arial, sans-serif" font-size="12" fill="#666">validates</text>
+  
+  <!-- Validation Layer -->
+  <rect x="100" y="290" width="200" height="70" fill="#9B59B6" stroke="#7D3C98" stroke-width="2" rx="5"/>
+  <text x="200" y="320" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="white">
+    Validation Layer
+  </text>
+  <text x="200" y="340" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="white">
+    (Validators)
+  </text>
+  
+  <!-- Arrow from Validation to Model -->
+  <line x1="200" y1="360" x2="200" y2="400" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="225" y="385" font-family="Arial, sans-serif" font-size="12" fill="#666">creates models</text>
+  
+  <!-- Model Layer -->
+  <rect x="100" y="400" width="200" height="70" fill="#E74C3C" stroke="#C0392B" stroke-width="2" rx="5"/>
+  <text x="200" y="430" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="white">
+    Model Layer
+  </text>
+  <text x="200" y="450" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="white">
+    (Movie, User)
+  </text>
+  
+  <!-- Arrow from Model to Service -->
+  <line x1="200" y1="470" x2="200" y2="510" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="220" y="495" font-family="Arial, sans-serif" font-size="12" fill="#666">feeds into</text>
+  
+  <!-- Service Layer -->
+  <rect x="100" y="510" width="200" height="70" fill="#1ABC9C" stroke="#16A085" stroke-width="2" rx="5"/>
+  <text x="200" y="535" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="white">
+    Service Layer
+  </text>
+  <text x="200" y="555" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="white">
+    (Business Logic)
+  </text>
+  
+  <!-- Exception Layer (side box) -->
+  <rect x="500" y="400" width="200" height="70" fill="#E67E22" stroke="#CA6F1E" stroke-width="2" rx="5"/>
+  <text x="600" y="430" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="white">
+    Exception Layer
+  </text>
+  <text x="600" y="450" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="white">
+    (ValidationException)
+  </text>
+  
+  <!-- Dashed line from Validation to Exception -->
+  <line x1="300" y1="325" x2="500" y2="435" stroke="#666" stroke-width="2" stroke-dasharray="5,5"/>
+  <text x="380" y="375" font-family="Arial, sans-serif" font-size="11" fill="#666">throws</text>
+  
+  <!-- Arrow marker definition -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#666"/>
+    </marker>
+  </defs>
+</svg>

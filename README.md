@@ -6,6 +6,14 @@ A Java application that recommends movies to users based on their genre preferen
 ## Project Structure
 ```
 Movie_Recommendation_Testing/
+├── Documents/
+│   ├── ARCHITECTURE.md                 # System architecture and design
+│   ├── PROJECT_SUMMARY.md              # Project overview and deliverables
+│   ├── QUICK_REFERENCE.md              # Quick start guide
+│   ├── TEST_DATA_EXAMPLES.md           # Test case examples
+│   ├── TESTING_GUIDE.md                # Comprehensive testing instructions
+│   ├── architecture-high-level.svg     # High-level architecture diagram
+│   └── architecture-interaction-flow.svg  # Data flow diagram
 ├── src/
 │   └── main/
 │       └── java/
@@ -26,11 +34,32 @@ Movie_Recommendation_Testing/
 │                       │   └── RecommendationService.java
 │                       └── exception/
 │                           └── ValidationException.java
+├── Testing/
+│   └── java/
+│       └── com/
+│           └── movie/
+│               └── recommendation/
+│                   ├── model/
+│                   │   ├── MovieTest.java
+│                   │   └── UserTest.java
+│                   ├── validator/
+│                   │   ├── MovieValidatorTest.java
+│                   │   └── UserValidatorTest.java
+│                   ├── parser/
+│                   │   ├── MovieParserTest.java
+│                   │   └── UserParserTest.java
+│                   └── service/
+│                       └── RecommendationServiceTest.java
+├── build/
+│   ├── build.sh                        # Linux/Mac build script
+│   └── build.bat                       # Windows build script
+├── bin/                                # Compiled .class files
 ├── input/
-│   ├── movies.txt
-│   └── users.txt
+│   ├── movies.txt                      # Sample movie data
+│   └── users.txt                       # Sample user data
 ├── output/
-│   └── recommendations.txt
+│   └── recommendations.txt             # Generated recommendations
+├── START_HERE.txt                      # Quick start instructions
 └── README.md
 ```
 
