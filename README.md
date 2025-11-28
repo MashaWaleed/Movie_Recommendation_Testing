@@ -3,6 +3,20 @@
 ## Overview
 A Java application that recommends movies to users based on their genre preferences.
 
+## Quick Start (Windows)
+
+**Using the pre-built executable:**
+```cmd
+MovieRecommendation.exe
+```
+
+The executable will:
+- Read input files from `input/movies.txt` and `input/users.txt`
+- Generate recommendations in `output/recommendations.txt`
+- Require Java 11 or higher installed on your system
+
+**Note**: If you don't have Java installed, download it from [java.com/download](https://www.java.com/download)
+
 ## Project Structure
 ```
 Movie_Recommendation_Testing/
