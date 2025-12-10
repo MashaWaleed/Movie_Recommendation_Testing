@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Run Movie Recommendation System",
+      "request": "launch",
+      "mainClass": "com.movie.recommendation.Main",
+      "projectName": "Movie_Recommendation_Testing",
+      "cwd": "${workspaceFolder}"
+    }
+  ]
+}
