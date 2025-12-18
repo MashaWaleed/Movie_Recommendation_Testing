@@ -43,6 +43,17 @@ import java.util.regex.Pattern;
  */
 public class MovieValidator {
     
+    // Track used number parts across all movies to ensure uniqueness
+    private Set<String> usedNumberParts = new HashSet<>();
+    
+    /**
+     * Resets the validator state (used number parts).
+     * Call this before validating a new file.
+     */
+    public void reset() {
+        usedNumberParts.clear();
+    }
+    
     /**
      * Validates the movie title.
      * Rule: Every word in the title must start with a capital letter.
@@ -122,13 +133,11 @@ public class MovieValidator {
             throw new ValidationException("ERROR: Movie Id numbers {" + id + "} aren't unique");
         }
         
-        // Validate all 3 numbers are unique
-        Set<Character> uniqueDigits = new HashSet<>();
-        for (char digit : numberPart.toCharArray()) {
-            if (!uniqueDigits.add(digit)) {
-                throw new ValidationException("ERROR: Movie Id numbers {" + id + "} aren't unique");
-            }
+        // Validate that these 3 digits haven't been used by another movie
+        if (usedNumberParts.contains(numberPart)) {
+            throw new ValidationException("ERROR: Movie Id numbers {" + id + "} aren't unique");
         }
+        usedNumberParts.add(numberPart);
     }
     
     /**

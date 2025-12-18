@@ -3,7 +3,8 @@
   "java.project.outputPath": "bin",
   "java.project.referencedLibraries": [],
   "code-runner.executorMap": {
-    "java": "cd $workspaceRoot && javac -d bin src/main/java/com/movie/recommendation/**/*.java src/main/java/com/movie/recommendation/*.java && java -cp bin com.movie.recommendation.Main"
+    "java": "cd \"$workspaceRoot\" && javac -d bin src/main/java/com/movie/recommendation/Main.java src/main/java/com/movie/recommendation/*/*.java && java -cp bin com.movie.recommendation.Main"
   },
-  "code-runner.runInTerminal": true
+  "code-runner.runInTerminal": true,
+  "java.configuration.updateBuildConfiguration": "automatic"
 }
